@@ -1,7 +1,7 @@
 
 <br>
 
-<c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conectado em: &nbsp;&nbsp <%= current_user.email %>&nbsp;&nbsp&nbsp;&nbsp <%= link_to ' LOG OUT', destroy_user_session_path, method: :delete  %>
+<p><c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong> Conectado em: &nbsp;&nbsp <%= current_user.email %>&nbsp;&nbsp&nbsp;&nbsp <%= link_to ' LOG OUT', destroy_user_session_path, method: :delete  %> &nbsp;&nbsp&nbsp;&nbsp <p5 id="notice"><%= notice %></p5></c> &nbsp;&nbsp&nbsp;&nbsp <%= link_to 'EDITAR', edit_comment_path(@comment) %> | <%= link_to 'VOLTAR', comments_path %></strong></p>
 
 <br>
 <br>
@@ -11,7 +11,7 @@
 <p>
 <font size="5.5" face="Verdana">
 
-  <t1><strong>NOME:</strong><t1><br><br>
+  <t1><strong>USUÁRIO:</strong><t1><br><br>
   <%= @comment.name %>
 
 <br>
@@ -27,16 +27,13 @@
 <br>
 <br>
 
-<t1><strong>DESCRIÇÃO:</strong><t1><br><br>
+<t1><strong>COMENTÁRIO:</strong><t1><br><br>
   <%= @comment.description %>
 
 <br>
 <br>
 <br>
 <br>
-
-<%= link_to 'EDITAR', edit_comment_path(@comment) %> |
-<%= link_to 'VOLTAR', comments_path %>
 
 </font>
 </p>
