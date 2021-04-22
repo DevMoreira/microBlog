@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: 5
   username: root
-  password: 28943678/*devgu*/
+  password:
   host: localhost
 
 development:
