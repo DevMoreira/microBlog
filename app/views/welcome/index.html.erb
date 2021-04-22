@@ -1,0 +1,37 @@
+<h1><center><strong> MicroBlog </strong></center></h1>
+
+<center>
+
+<% if user_signed_in? %>
+
+<br>
+<br>
+    <%= link_to 'EDITAR CONTA', edit_user_registration_path %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to 'POSTAR', posts_path %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to 'SAIR', destroy_user_session_path, method: :delete %>
+
+<% else %>
+
+<br>
+<br>
+    <%= link_to 'CASDASTRAR-SE', new_user_registration_path %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to 'POSTAR', posts_path %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to 'EDITAR CONTA', edit_user_registration_path %>
+
+<% end %>
+
+</center>
+
+<style >/* style é a parte de css */
+        body{
+            background-color: rgb(0, 255, 0);
+            font: normal 35px Arial;
+        }
+        h1{
+            color:rgb(0, 0, 255) 
+        }
+</style>

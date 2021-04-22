@@ -1,0 +1,59 @@
+<center>
+
+<h2>CADASTRO</h2>
+
+<br>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :EMAIL %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    <%= f.label :SENHA %>
+    <% if @minimum_password_length %>
+    (<%= @minimum_password_length %> caracteres minímos)
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    <%= f.label :CONFIRMAR_SENHA %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+  
+  <br>
+
+  <div class="actions">
+    <%= f.submit "CADASTRAR" %>
+  </div>
+  
+  <br>
+
+<% end %>
+
+<p>
+<font size='6'>
+
+<%= render "users/shared/links" %>
+<br><br>
+<%= link_to 'VOLTAR', root_path %>
+
+</font>
+</p>
+
+</center>
+
+<style >/* style é a parte de css */
+        body{
+            background-color: rgb(0, 255, 0);
+            font: normal 20pX Arial;
+        }
+</style>

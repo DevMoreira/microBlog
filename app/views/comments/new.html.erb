@@ -1,0 +1,17 @@
+<br>
+
+<c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conectado em: &nbsp;&nbsp <%= current_user.email %>&nbsp;&nbsp&nbsp;&nbsp <%= link_to ' LOG OUT', destroy_user_session_path, method: :delete  %>
+
+<br><br>
+
+<h1> <center> Novo Comentário <center> </h1>
+
+<%= render 'form', comment: @comment %>
+
+<br>
+
+<center>
+
+<%= link_to 'VOLTAR', comments_path %>
+
+</center>

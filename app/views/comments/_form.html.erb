@@ -1,0 +1,64 @@
+<br>
+
+<center>
+
+<%= form_with(model: comment) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+        <% comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+  <t1><%= form.label :name %><t1>
+    <%= form.text_field :name %>
+  </div>
+
+  <br>
+
+  <div class="field">
+  <t1><%= form.label :email %><t1>
+    <%= form.text_field :email %>
+  </div>
+
+  <br>
+
+  <div class="field">
+  <t1><%= form.label :description %><t1>
+    <%= form.text_area :description %>
+  </div>
+
+  <br>
+
+  <div class="actions">
+    <%= form.submit "CONCLUIR" %>
+  </div>
+<% end %>
+
+</center>
+
+<style >/* style é a parte de css */
+        body{
+            background-color: rgb(80, 0, 0);
+            font: normal 20pX Arial;
+        }
+        h0{
+            color:rgb(0, 0, 255)
+            font: normal 30pX Arial; 
+        }
+        h1{
+            color:rgb(0, 0, 255) 
+        }
+        t1,t2,lk{
+            color:rgb(255, 255, 255) 
+        }
+        c{
+            color:rgb(0, 0, 255) 
+        }
+</style>

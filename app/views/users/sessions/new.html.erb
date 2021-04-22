@@ -1,0 +1,52 @@
+<h2><center>LOGIN</center></h2>
+
+<br>
+
+<center>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :EMAIL %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    <%= f.label :SENHA %>
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :LEMBRAR %>
+    </div>
+  <% end %>
+  
+  <br>
+
+  <div class="actions">
+    <%= f.submit "ACESSAR" %>
+  </div>
+<% end %>
+
+<br>
+<p> 
+<font size='6'>
+
+<%= link_to "CADASTRAR", new_registration_path(resource_name) %>
+&nbsp;&nbsp;&nbsp&nbsp
+<%= link_to 'VOLTAR', root_path %>
+
+</font>
+</p>
+
+</center>
+
+<style >/* style é a parte de css */
+        body{
+            background-color: rgb(0, 255, 0);
+            font: normal 20pX Arial;
+        }
+</style>

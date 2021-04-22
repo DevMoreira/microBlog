@@ -1,0 +1,73 @@
+
+<p><c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong> Conectado em: &nbsp;&nbsp <%= current_user.email %>&nbsp;&nbsp&nbsp;&nbsp <%= link_to ' LOG OUT', destroy_user_session_path, method: :delete  %> &nbsp;&nbsp&nbsp;&nbsp <p5 id="notice"><%= notice %></p5></c></strong></p>
+
+<center>
+
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  <t1><%= form.label :Nome %><t1>
+    <%= form.text_field :name %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    <t1><%= form.label :Título %><t1>
+    <%= form.text_field :title %>
+  </div>
+
+  <br>
+
+  <div class="field">
+  <t1><%= form.label :Descrição %><t1>
+    <%= form.text_area :description %>
+  </div>
+
+  <br>
+
+  <div class="field">
+  <t1><%= form.label :Email %><t1>
+    <%= form.text_field :email %>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="actions">
+    <%= form.submit "CRIAR POST" %>
+  </div>
+<% end %>
+
+</center>
+
+<style >/* style é a parte de css */
+        body{
+            background-color: rgb(80, 0, 0);
+            font: normal 20pX Arial;
+        }
+        h0{
+            color:rgb(0, 0, 255)
+            font: normal 30pX Arial; 
+        }
+        h1{
+            color:rgb(0, 0, 255) 
+        }
+        t1,t2,lk{
+            color:rgb(255, 255, 255) 
+        }
+        c{
+            color:rgb(0, 0, 255) 
+        }
+</style>

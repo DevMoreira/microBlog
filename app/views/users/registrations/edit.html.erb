@@ -1,0 +1,61 @@
+<h2><center>Editando: &nbsp; <%= current_user.email %></center></h2>
+
+<center>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :EMAIL %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <br>
+
+  <div class="field">
+    <%= f.label :SENHA %> <i>(deixe em branco se não quiser mudar)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> caracteres minímos</em>
+    <% end %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    <%= f.label :CONFIMAR_SENHA %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    <%= f.label :SENHA_RECENTE %> 
+    <%= f.password_field :current_password, autocomplete: "current-password" %><br>
+    <i>(confirme sua senha atual para realizar alterações)</i><br />
+  </div>
+
+  <br>
+
+  <div class="actions">
+    <%= f.submit "ATUALIZAR" %>
+  </div>
+<% end %>
+
+<h3><h10>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to "VOLTAR", root_path %></h10> <br> SE QUISER CANCELE SUA CONTA &nbsp;&nbsp;&nbsp;&nbsp;</h3> <%= button_to " CANCELAR CONTA ", registration_path(resource_name), data: { confirm: " TEM CERTEZA ? " }, method: :delete %>
+
+</center>
+
+<style >/* style é a parte de css */
+        body{
+            background-color: rgb(0, 255, 0);
+            font: normal 18pX Arial;
+        }
+</style>

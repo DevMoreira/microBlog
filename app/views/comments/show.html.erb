@@ -1,0 +1,64 @@
+
+<br>
+
+<c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conectado em: &nbsp;&nbsp <%= current_user.email %>&nbsp;&nbsp&nbsp;&nbsp <%= link_to ' LOG OUT', destroy_user_session_path, method: :delete  %>
+
+<br>
+<br>
+
+<center>
+
+<p>
+<font size="5.5" face="Verdana">
+
+  <t1><strong>NOME:</strong><t1><br><br>
+  <%= @comment.name %>
+
+<br>
+<br>
+<br>
+<br>
+
+<t1><strong>EMAIL:</strong><t1><br><br>
+  <%= @comment.email %>
+
+<br>  
+<br>
+<br>
+<br>
+
+<t1><strong>DESCRIÇÃO:</strong><t1><br><br>
+  <%= @comment.description %>
+
+<br>
+<br>
+<br>
+<br>
+
+<%= link_to 'EDITAR', edit_comment_path(@comment) %> |
+<%= link_to 'VOLTAR', comments_path %>
+
+</font>
+</p>
+
+</center>
+
+<style >/* style é a parte de css */
+        body{
+            background-color: rgb(80, 0, 0);
+            font: normal 20pX Arial;
+        }
+        h0{
+            color:rgb(0, 0, 255)
+            font: normal 30pX Arial; 
+        }
+        h1{
+            color:rgb(0, 0, 255) 
+        }
+        t1,t2,lk{
+            color:rgb(255, 255, 255) 
+        }
+        c{
+            color:rgb(0, 0, 255) 
+        }
+</style>
