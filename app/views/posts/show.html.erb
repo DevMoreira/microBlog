@@ -1,6 +1,6 @@
 <br>
 
-<p><c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong> Conectado em: &nbsp;&nbsp <%= current_user.email %>&nbsp;&nbsp&nbsp;&nbsp <%= link_to ' LOG OUT', destroy_user_session_path, method: :delete  %> &nbsp;&nbsp&nbsp;&nbsp <p5 id="notice"><%= notice %></p5></c></strong></p>
+<p><c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong> Conectado em: &nbsp;&nbsp <%= current_user.email %>&nbsp;&nbsp&nbsp;&nbsp <%= link_to ' LOG OUT', destroy_user_session_path, method: :delete  %> &nbsp;&nbsp&nbsp;&nbsp <p5 id="notice"><%= notice %></p5></c> &nbsp;&nbsp&nbsp;&nbsp <%= link_to 'EDITAR', edit_post_path(@post) %> | <%= link_to 'VOLTAR', posts_path %></strong></p>
 
 <br>
 
@@ -9,7 +9,7 @@
 <p>
 <font size="5.7" face="Verdana">
 
-  <t1><strong>NOME:</strong><t1><br><br>
+  <t1><strong>USUÁRIO:</strong><t1><br><br>
   <%= @post.name %>
 
 <br>
@@ -25,7 +25,7 @@
 <br>
 <br>
 
-<t1><strong>DESCRIÇÃO:</strong><t1><br><br>
+<t1><strong>POSTAGEM:</strong><t1><br><br>
   <%= @post.description %>
 
 <br>
@@ -40,9 +40,6 @@
 <br>
 <br>
 <br>
-
-<%= link_to 'EDITAR', edit_post_path(@post) %> |
-<%= link_to 'VOLTAR', posts_path %>
 
 </font>
 </p>
